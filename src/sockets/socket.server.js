@@ -1,11 +1,13 @@
 import { Server } from "socket.io";
 
-function initScoketServer(httpServer) {
+function initSocketServer(httpServer) {
     const io = new Server(httpServer, {})
 
     io.on("connection", (socket)=>{
         console.log("New client connected", socket.id);
     })
+
+    return io;
 }
 
-export { initScoketServer };
+export { initSocketServer };

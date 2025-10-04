@@ -8,6 +8,7 @@ async function createChat(req, res) {
         user: user._id,
         title,
     });
+    await chat.save();
 
     res.status(201).json({ message: "Chat created", chat:{
         id: chat._id,
