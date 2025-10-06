@@ -8,8 +8,8 @@ import chatRoutes from './routes/chat.routes.js';
 const app = express();
 
 // Middlewares
-app.use(express.json());
-app.use(cookieParser());
+app.use(express.json()); 
+app.use(cookieParser()); 
 
 // using Routes 
 app.use('/api/chat', chatRoutes);

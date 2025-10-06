@@ -11,7 +11,7 @@ async function authUser(req, res, next) {
 
     const user = await userModel.findById(decoded.id);
 
-    req.user = user;
+    req.user = user; // adding user to req object for future use in controllers 
 
     next();
   } catch (err) {

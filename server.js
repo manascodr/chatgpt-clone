@@ -7,9 +7,9 @@ import http from "http"; // <-- fix import name
 dotenv.config();
 connectDB();
 
-const server = http.createServer(app); // <-- fix variable name
+const server = http.createServer(app); // <-- create the HTTP server with Express app
 
-initSocketServer(server);
+initSocketServer(server); // <-- pass the HTTP server to initialize Socket.io server
 
 server.listen(3000, () => { // <-- start the HTTP server
   console.log("Server is running on port 3000");
